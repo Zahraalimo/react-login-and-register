@@ -1,0 +1,143 @@
+.registerContainer{
+    display: flex;
+    height:100vh;
+    position: relative; 
+}
+
+.registerContainer form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: #0c5064;
+}
+
+.right{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formTitle{
+    width: 80%;
+}
+
+.formControl{
+    width: 80%;
+}
+
+.formControl .errorMsg{
+    color: red;
+}
+
+
+.formControl input{
+    background-color: #ebebeb;
+    padding: 1rem;
+    margin-top: 4px;
+    outline: none;
+}
+
+.formControlSubmit{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.formControlSubmit button:nth-child(1){
+    color: #0c5064;
+}
+.formControlSubmit button:nth-child(2){
+    background-color: #0c5064;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.formControlSubmit button:hover{
+    transform: translateY(-2%);
+}
+
+.left {
+    flex-basis: 60%;
+    background-image:linear-gradient( rgb(8 131 104 / .5), rgb(8 131 104 / .5)),
+    url('../../assets/images/close-up-man-signing-contract.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+  }
+
+  .left  hr{
+    width: 40%;
+    border: 1px solid #fff;
+  }
+  .textContainer,
+  .logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .logoContainer{
+    justify-content: space-evenly;
+  }
+
+  .iconLogo{
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .iconLogo:hover{
+    color: rgb(227, 227, 223);
+  }
+
+  .homeLogoContainer{
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    transform: translateX(-40%);
+  }
+
+
+
+@media (max-width: 1060px) {
+    .textContainer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .registerContainer{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .left{
+        flex-basis: unset;
+        height: 50vh;
+    }
+    .homeLogoContainer{
+        position: absolute;
+        bottom: 60%;
+        left: 10%;
+        transform: translate(10%,-40%);
+    }
+    .iconHome{
+        color: #0c5064;
+    }
+    .iconHome:hover{
+        color: #157997;
+    }
+    .formControlSubmit{
+        flex-direction: column-reverse;
+    }
+} 
